@@ -1,18 +1,15 @@
 {
   "name": "backendlearning",
   "version": "1.0.0",
-  "description": "a basic app to deploy",
+  "description": "learning backend from youtube",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "node"
+    "javascript",
+    "backend"
   ],
-  "author": "Suresh Goudappanavar",
-  "license": "ISC",
-  "dependencies": {
-    "dotenv": "^16.4.7",
-    "express": "^5.1.0"
-  }
+  "author": "Suresh",
+  "license": "ISC"
 }
