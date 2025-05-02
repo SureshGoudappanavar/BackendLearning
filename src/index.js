@@ -3,17 +3,24 @@ import express from 'express';
 import connnectDB from './db/index.js';
 
 // Load environment variables from .env file
-dotenv.config();
+dotenv.config({
+    path:'./.env'
+});
 
 const app = express();
 
-connnectDB();
+connnectDB().then(()=>{
+    app.listen(process.env.PORT || 8000, () => {
+        console.log(`Server is running on port ${process.env.PORT}`);
+      });
+})
+.catch((err)=>{
+    console.log("MONGO db connection failed !!!",err)
+})
 console.log('MongoDB URL:', process.env.MONGODB_URL);
 
 
-app.listen(process.env.PORT, () => {
-  console.log(`Server is running on port ${process.env.PORT}`);
-});
+
 
 
 
